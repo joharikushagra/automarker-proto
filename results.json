@@ -1,0 +1,553 @@
+{
+  "config": {
+    "configFile": "F:\\Web\\zaio\\automarker-proto\\playwright.config.js",
+    "rootDir": "F:/Web/zaio/automarker-proto/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "totalTime": 32518.724999964237
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "F:/Web/zaio/automarker-proto/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "F:/Web/zaio/automarker-proto/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "F:/Web/zaio/automarker-proto/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "F:/Web/zaio/automarker-proto/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "F:/Web/zaio/automarker-proto/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "F:/Web/zaio/automarker-proto/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.35.0",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "automarker.spec.js",
+      "file": "automarker.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Checking frontend challenge",
+          "file": "automarker.spec.js",
+          "line": 23,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should check heart-icon is 41px",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "failed",
+                      "duration": 1487,
+                      "error": {
+                        "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\nExpected: \u001b[32m41\u001b[39m\nReceived: \u001b[31m40\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\nExpected: \u001b[32m41\u001b[39m\nReceived: \u001b[31m40\u001b[39m\n    at F:\\Web\\zaio\\automarker-proto\\tests\\automarker.spec.js:28:30",
+                        "location": {
+                          "file": "F:\\Web\\zaio\\automarker-proto\\tests\\automarker.spec.js",
+                          "column": 30,
+                          "line": 28
+                        },
+                        "snippet": "  26 |     const heartIcon = await page.locator(\".heart-icon\");\n  27 |     const icon = await heartIcon.boundingBox();\n> 28 |     await expect(icon.width).toEqual(41);\n     |                              ^\n  29 |   });\n  30 |\n  31 |   test(\"heart has width 83px and height 34px\", async ({ page }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "F:\\Web\\zaio\\automarker-proto\\tests\\automarker.spec.js",
+                            "column": 30,
+                            "line": 28
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\nExpected: \u001b[32m41\u001b[39m\nReceived: \u001b[31m40\u001b[39m\n\n  26 |     const heartIcon = await page.locator(\".heart-icon\");\n  27 |     const icon = await heartIcon.boundingBox();\n> 28 |     await expect(icon.width).toEqual(41);\n     |                              ^\n  29 |   });\n  30 |\n  31 |   test(\"heart has width 83px and height 34px\", async ({ page }) => {\n\n\u001b[2m    at F:\\Web\\zaio\\automarker-proto\\tests\\automarker.spec.js:28:30\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-22T07:52:49.607Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "F:\\Web\\zaio\\automarker-proto\\tests\\automarker.spec.js",
+                        "column": 30,
+                        "line": 28
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "e34d235d8e179ce298b8-27b5fd9646a7f9782624",
+              "file": "automarker.spec.js",
+              "line": 25,
+              "column": 3
+            },
+            {
+              "title": "heart has width 83px and height 34px",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 1483,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-22T07:52:49.653Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e34d235d8e179ce298b8-5792a0751e7b7c744840",
+              "file": "automarker.spec.js",
+              "line": 31,
+              "column": 3
+            },
+            {
+              "title": "heart-icon is inside heart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "status": "passed",
+                      "duration": 653,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-22T07:52:49.611Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e34d235d8e179ce298b8-88aad871fadb50ed6657",
+              "file": "automarker.spec.js",
+              "line": 38,
+              "column": 3
+            },
+            {
+              "title": "heart svg is color #ff6444",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 1432,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-22T07:52:49.689Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e34d235d8e179ce298b8-4a1d702bfcb3a259ed3c",
+              "file": "automarker.spec.js",
+              "line": 42,
+              "column": 3
+            },
+            {
+              "title": "should check heart-icon is 41px",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "status": "failed",
+                      "duration": 7957,
+                      "error": {
+                        "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\nExpected: \u001b[32m41\u001b[39m\nReceived: \u001b[31m40\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\nExpected: \u001b[32m41\u001b[39m\nReceived: \u001b[31m40\u001b[39m\n    at F:\\Web\\zaio\\automarker-proto\\tests\\automarker.spec.js:28:30",
+                        "location": {
+                          "file": "F:\\Web\\zaio\\automarker-proto\\tests\\automarker.spec.js",
+                          "column": 30,
+                          "line": 28
+                        },
+                        "snippet": "  26 |     const heartIcon = await page.locator(\".heart-icon\");\n  27 |     const icon = await heartIcon.boundingBox();\n> 28 |     await expect(icon.width).toEqual(41);\n     |                              ^\n  29 |   });\n  30 |\n  31 |   test(\"heart has width 83px and height 34px\", async ({ page }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "F:\\Web\\zaio\\automarker-proto\\tests\\automarker.spec.js",
+                            "column": 30,
+                            "line": 28
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\nExpected: \u001b[32m41\u001b[39m\nReceived: \u001b[31m40\u001b[39m\n\n  26 |     const heartIcon = await page.locator(\".heart-icon\");\n  27 |     const icon = await heartIcon.boundingBox();\n> 28 |     await expect(icon.width).toEqual(41);\n     |                              ^\n  29 |   });\n  30 |\n  31 |   test(\"heart has width 83px and height 34px\", async ({ page }) => {\n\n\u001b[2m    at F:\\Web\\zaio\\automarker-proto\\tests\\automarker.spec.js:28:30\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-22T07:52:57.284Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "F:\\Web\\zaio\\automarker-proto\\tests\\automarker.spec.js",
+                        "column": 30,
+                        "line": 28
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "e34d235d8e179ce298b8-e803fcd7b9c0494db12e",
+              "file": "automarker.spec.js",
+              "line": 25,
+              "column": 3
+            },
+            {
+              "title": "heart has width 83px and height 34px",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "status": "passed",
+                      "duration": 7653,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-22T07:52:57.381Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e34d235d8e179ce298b8-d580c08b971d2e2beb15",
+              "file": "automarker.spec.js",
+              "line": 31,
+              "column": 3
+            },
+            {
+              "title": "heart-icon is inside heart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "status": "passed",
+                      "duration": 6555,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-22T07:52:57.273Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e34d235d8e179ce298b8-08c734bde02f22d678a2",
+              "file": "automarker.spec.js",
+              "line": 38,
+              "column": 3
+            },
+            {
+              "title": "heart svg is color #ff6444",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "status": "passed",
+                      "duration": 7221,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-22T07:52:57.402Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e34d235d8e179ce298b8-f9bf96e300c308084e57",
+              "file": "automarker.spec.js",
+              "line": 42,
+              "column": 3
+            },
+            {
+              "title": "should check heart-icon is 41px",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "status": "failed",
+                      "duration": 1186,
+                      "error": {
+                        "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\nExpected: \u001b[32m41\u001b[39m\nReceived: \u001b[31m40\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\nExpected: \u001b[32m41\u001b[39m\nReceived: \u001b[31m40\u001b[39m\n    at F:\\Web\\zaio\\automarker-proto\\tests\\automarker.spec.js:28:30",
+                        "location": {
+                          "file": "F:\\Web\\zaio\\automarker-proto\\tests\\automarker.spec.js",
+                          "column": 30,
+                          "line": 28
+                        },
+                        "snippet": "  26 |     const heartIcon = await page.locator(\".heart-icon\");\n  27 |     const icon = await heartIcon.boundingBox();\n> 28 |     await expect(icon.width).toEqual(41);\n     |                              ^\n  29 |   });\n  30 |\n  31 |   test(\"heart has width 83px and height 34px\", async ({ page }) => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "F:\\Web\\zaio\\automarker-proto\\tests\\automarker.spec.js",
+                            "column": 30,
+                            "line": 28
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\nExpected: \u001b[32m41\u001b[39m\nReceived: \u001b[31m40\u001b[39m\n\n  26 |     const heartIcon = await page.locator(\".heart-icon\");\n  27 |     const icon = await heartIcon.boundingBox();\n> 28 |     await expect(icon.width).toEqual(41);\n     |                              ^\n  29 |   });\n  30 |\n  31 |   test(\"heart has width 83px and height 34px\", async ({ page }) => {\n\n\u001b[2m    at F:\\Web\\zaio\\automarker-proto\\tests\\automarker.spec.js:28:30\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-22T07:53:15.357Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "F:\\Web\\zaio\\automarker-proto\\tests\\automarker.spec.js",
+                        "column": 30,
+                        "line": 28
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "e34d235d8e179ce298b8-c0a259c8628d9ea4ee02",
+              "file": "automarker.spec.js",
+              "line": 25,
+              "column": 3
+            },
+            {
+              "title": "heart has width 83px and height 34px",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "status": "passed",
+                      "duration": 1564,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-22T07:53:14.618Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e34d235d8e179ce298b8-cb31f66953d1b85082ee",
+              "file": "automarker.spec.js",
+              "line": 31,
+              "column": 3
+            },
+            {
+              "title": "heart-icon is inside heart",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "status": "passed",
+                      "duration": 1276,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-22T07:53:14.614Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e34d235d8e179ce298b8-ca30b0e3df4ba9326065",
+              "file": "automarker.spec.js",
+              "line": 38,
+              "column": 3
+            },
+            {
+              "title": "heart svg is color #ff6444",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "status": "passed",
+                      "duration": 1570,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-06-22T07:53:14.619Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e34d235d8e179ce298b8-46a4507a5808a8ed1306",
+              "file": "automarker.spec.js",
+              "line": 42,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
